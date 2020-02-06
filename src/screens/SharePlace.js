@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react';
 import {Button, View, Text} from 'react-native';
-export default class SharePlace extends Component {
-    render() {
-        return (
+import PlaceInput from '../components/PlaceInput/PlaceInput';
+import {connect} from 'react-redux';
+import {addPlace} from '../store/actions';
+
+class SharePlace extends Component {
+  placeAddedHandler = placeName => {
+    this.props.addPlace(placeName);
+  };
+  render() {
+    return (
       <View>
-        <Text>Share</Text>
+        <PlaceInput onPlaceAdded={this.placeAddedHandler} />
       </View>
-        )
-    }
+    );
+  }
 }
+
+
+export default connect(null, {addPlace})(SharePlace);
