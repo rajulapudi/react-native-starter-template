@@ -3,9 +3,8 @@ import {
   View,
   Image,
   Text,
-  Button,
   StyleSheet,
-  TouchableOpacity,
+  TouchableOpacity
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {connect} from 'react-redux';

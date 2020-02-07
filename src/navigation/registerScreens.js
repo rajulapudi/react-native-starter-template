@@ -9,12 +9,14 @@ import AuthScreen from '../screens/Auth';
 import FindPlace from '../screens/FindPlace';
 import SharePlace from '../screens/SharePlace';
 import PlaceDetail from '../screens/PlaceDetail';
+import Sidebar from '../screens/Sidebar';
 
 import {
   AUTH_SCREEN,
   FIND_PLACE,
   SHARE_PLACE,
   PLACE_DETAIL,
+  SIDEBAR,
 } from './screenNames';
 
 const store = configureStore();
@@ -31,6 +33,7 @@ export default function() {
   Navigation.registerComponent(AUTH_SCREEN, () => WrappedComponent(AuthScreen));
   Navigation.registerComponent(FIND_PLACE, () => WrappedComponent(FindPlace));
   Navigation.registerComponent(SHARE_PLACE, () => WrappedComponent(SharePlace));
+  Navigation.registerComponent(SIDEBAR, () => WrappedComponent(Sidebar));
   Navigation.registerComponent(PLACE_DETAIL, () =>
     WrappedComponent(PlaceDetail),
   );

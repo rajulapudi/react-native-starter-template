@@ -7,15 +7,11 @@ registerScreens();
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setDefaultOptions({
     topBar: {
-      background: {
-        color: '#039893',
-      },
-      title: {
-        color: 'white',
-      },
+      background: {color: '#fff'},
+      title: {color: 'black'},
       backButton: {
         title: '', // Remove previous screen name from back button
-        color: 'white',
+        color: 'black',
       },
       buttonColor: 'white',
     },
@@ -33,6 +29,18 @@ Navigation.events().registerAppLaunchedListener(() => {
       selectedTextColor: 'black',
       iconColor: 'gray',
       selectedIconColor: 'black',
+    },
+    sideMenu: {
+      left: {
+        width: 260, 
+        height: 270,
+        visible: false,
+        enabled: true,
+        shouldStretchDrawer: false,
+        animationVelocity: 2500,
+        animationType: 'parallax',
+        openGestureMode: 'bezel',
+      },
     },
   });
 
